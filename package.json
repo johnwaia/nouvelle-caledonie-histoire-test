@@ -1,0 +1,22 @@
+{
+  "name": "nouvelle-caledonie-histoire",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run check-data && vite build",
+    "preview": "vite preview",
+    "check-data": "node --disable-warning=ExperimentalWarning scripts/check-data.mjs",
+    "admin": "node --disable-warning=ExperimentalWarning admin/server.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "sql.js": "^1.17.0",
+    "vue": "^3.5.46"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.11",
+    "vite": "^8.3.8"
+  }
+}

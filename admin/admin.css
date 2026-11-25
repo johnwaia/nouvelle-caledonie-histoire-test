@@ -1,0 +1,59 @@
+* { box-sizing: border-box; }
+body { margin: 0; height: 100vh; display: flex; flex-direction: column; font: 15px/1.45 system-ui, sans-serif; color: #1f2a24; background: #f4f1ea; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; padding: 0.4rem 0.8rem; border: 1px solid #c9c2b4; border-radius: 8px; background: #fff; }
+button.primary { background: #1f4d2e; border-color: #1f4d2e; color: #fff; }
+button.danger { color: #b91c1c; border-color: #e3b4b4; }
+:focus-visible { outline: 2px solid #b7791f; outline-offset: 1px; }
+header { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; align-items: center; padding: 0.6rem 1rem; background: #1f4d2e; color: #fff; }
+h1 { margin: 0; font-size: 1.1rem; }
+nav { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+nav button { background: none; color: #fff; border-color: rgba(255, 255, 255, 0.35); }
+nav button[aria-current='true'] { background: #fff; color: #1f4d2e; }
+main { flex: 1; min-height: 0; display: grid; grid-template-columns: 340px 1fr; }
+.side { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid #ddd5c6; background: #fff; }
+.side-tools { display: flex; gap: 0.5rem; padding: 0.7rem; }
+.side-tools input { flex: 1; min-width: 0; }
+#list { flex: 1; margin: 0; padding: 0; overflow: auto; list-style: none; }
+#list button { display: block; width: 100%; padding: 0.5rem 0.8rem; border: 0; border-top: 1px solid #eee7da; border-radius: 0; text-align: left; overflow-wrap: anywhere; }
+#list button[aria-current='true'] { background: #e4efe6; }
+#list small { display: block; color: #6b7280; }
+#editor { padding: 1rem 1.4rem 3rem; overflow: auto; }
+form { max-width: 820px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 1rem; }
+form > * { grid-column: 1 / -1; }
+form > .half { grid-column: span 1; }
+h2 { margin: 0; overflow-wrap: anywhere; }
+label { display: block; font-weight: 600; }
+label small, .hint { font-weight: 400; color: #6b7280; }
+input:not([type='checkbox']):not([type='color']), select, textarea { width: 100%; padding: 0.4rem 0.55rem; border: 1px solid #c9c2b4; border-radius: 8px; background: #fff; font-weight: 400; }
+input:disabled { background: #eee; }
+textarea { min-height: 5rem; resize: vertical; }
+textarea.long { min-height: 12rem; }
+label.check { display: flex; gap: 0.5rem; align-items: center; }
+fieldset { margin: 0; padding: 0.8rem; border: 1px solid #ddd5c6; border-radius: 10px; background: #fbf9f4; }
+legend { padding: 0 0.4rem; font-weight: 600; }
+.row { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: flex-start; }
+.row > input, .row > textarea { flex: 1; min-width: 0; }
+.row > .short { flex: 0 0 130px; }
+.image-field { display: grid; grid-template-columns: 150px 1fr; gap: 0.8rem; }
+.image-field > div { display: grid; gap: 0.5rem; align-content: start; }
+.preview { width: 150px; height: 110px; object-fit: contain; border: 1px solid #ddd5c6; border-radius: 8px; background: #fff; }
+.actions { display: flex; gap: 0.6rem; position: sticky; bottom: -3rem; padding: 0.8rem 0; background: #f4f1ea; }
+.big { max-width: 420px; max-height: 320px; }
+#toast { position: fixed; right: 1rem; bottom: 1rem; max-width: 420px; padding: 0.7rem 1rem; border-radius: 10px; background: #1f4d2e; color: #fff; white-space: pre-line; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3); }
+#toast.error { background: #b91c1c; }
+#toast[hidden] { display: none; }
+@media (max-width: 760px) {
+  body { height: auto; }
+  main { grid-template-columns: 1fr; }
+  #list { max-height: 40vh; }
+  .image-field { grid-template-columns: 1fr; }
+}
+[hidden] { display: none !important; }
+.publish { display: flex; gap: 0.6rem; align-items: center; margin-left: auto; }
+.publish button { background: #f6c453; border-color: #f6c453; font-weight: 600; }
+.publish button:disabled { opacity: 0.5; cursor: default; }
+#publish { color: #1f2a24; }
+#login { margin: 2rem auto; padding: 1.4rem; max-width: 560px; border-radius: 12px; background: #fff; }
+#login p { margin: 0; }
+#login .actions { position: static; background: none; padding: 0; }

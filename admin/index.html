@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KANAKY · Administration</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/admin.css" />
+  </head>
+  <body>
+    <header>
+      <h1>KANAKY · Administration</h1>
+      <nav id="tabs"></nav>
+    </header>
+    <main>
+      <section class="side">
+        <div class="side-tools">
+          <input id="filter" type="search" placeholder="Filtrer…" aria-label="Filtrer la liste" />
+          <button id="add" type="button" class="primary">Ajouter</button>
+        </div>
+        <ul id="list"></ul>
+      </section>
+      <section id="editor" aria-live="polite"></section>
+    </main>
+    <div id="toast" role="status" hidden></div>
+    <script type="module" src="/local.js"></script>
+  </body>
+</html>
